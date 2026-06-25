@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon Echo Dot 2 Reviews — Donson Hoang</title>
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #0f172a;
+  --surface:  #1e293b;
+  --surface2: #0f172a;
+  --border:   #1e293b;
+  --text:     #f1f5f9;
+  --muted:    #64748b;
+  --teal:     #2dd4bf;
+  --sky:      #38bdf8;
+  --green:    #4ade80;
+  --amber:    #fbbf24;
+  --red:      #f87171;
+  --orange:   #fb923c;
+  --indigo:   #818cf8;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+header {
+  background: #0f172a;
+  border-bottom: 1px solid #1e293b;
+  padding: 32px 40px 28px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.author-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 10px;
+}
+
+.header-left h1 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.title-accent { color: var(--sky); }
+
+.header-sub {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 8px;
+  max-width: 520px;
+  line-height: 1.5;
+}
+
+.header-meta {
+  display: flex;
+  gap: 24px;
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.meta-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+.meta-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+section { margin-top: 36px; }
+
+h2.section-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.about-banner {
+  margin-top: 28px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-left: 3px solid var(--teal);
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.about-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+
+.about-text {
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.65;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.kpi-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 20px 22px 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.kpi-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+}
+
+.kpi-card.teal::after  { background: var(--teal); }
+.kpi-card.amber::after { background: var(--amber); }
+.kpi-card.green::after { background: var(--green); }
+.kpi-card.sky::after   { background: var(--sky); }
+
+.kpi-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .9px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.kpi-value {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--text);
+}
+
+.kpi-star { font-size: 22px; color: var(--amber); }
+
+.kpi-sub {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.charts-row { display: grid; gap: 14px; }
+.charts-row.big-small { grid-template-columns: 3fr 2fr; }
+
+.side-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.chart-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 20px 22px;
+}
+
+.chart-card h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.chart-card p.subtitle {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.chart-wrap { position: relative; }
+
+.sentiment-bars { display: flex; flex-direction: column; gap: 10px; }
+.sentiment-row  { display: flex; align-items: center; gap: 10px; }
+
+.sentiment-label {
+  width: 24px;
+  text-align: right;
+  font-size: 12px;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.bar-bg {
+  flex: 1;
+  height: 7px;
+  background: #334155;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width .5s ease;
+}
+
+.bar-count {
+  width: 44px;
+  text-align: right;
+  font-size: 12px;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.kw-list { display: flex; flex-direction: column; gap: 9px; }
+.kw-row  { display: flex; align-items: center; gap: 10px; }
+
+.kw-label {
+  width: 72px;
+  font-size: 12px;
+  color: var(--text);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.kw-bar-bg {
+  flex: 1;
+  height: 5px;
+  background: #334155;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.kw-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--teal);
+}
+
+.kw-count {
+  width: 40px;
+  font-size: 11px;
+  color: var(--muted);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.compare-box {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 14px 12px;
+  text-align: center;
+}
+
+.clabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.cvalue {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.ccount {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+.compare-box.green-box .cvalue { color: var(--green); }
+.compare-box.amber-box .cvalue { color: var(--amber); }
+
+.insight-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.insight-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.insight-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.ititle {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+.ibody {
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.browser-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 200px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 9px 14px;
+  color: var(--text);
+  font-size: 13px;
+  outline: none;
+}
+.search-box::placeholder { color: var(--muted); }
+.search-box:focus { border-color: var(--teal); }
+
+.filter-select {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 9px 13px;
+  color: var(--text);
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+.filter-select:focus { border-color: var(--teal); }
+
+.review-count-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.review-list { display: flex; flex-direction: column; gap: 9px; }
+
+.review-item {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 13px 16px;
+  transition: border-color .15s;
+}
+.review-item:hover { border-color: var(--teal); }
+
+.review-top {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.review-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+}
+
+.badge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+}
+
+.badge-verified { background: rgba(74,222,128,.12); color: var(--green); }
+.badge-color    { background: rgba(56,189,248,.12); color: var(--sky); }
+
+.review-text { font-size: 12px; color: #94a3b8; line-height: 1.6; }
+
+.review-footer { margin-top: 7px; }
+.review-date   { font-size: 11px; color: var(--muted); }
+
+.star-inline { font-size: 12px; }
+
+.no-results {
+  text-align: center;
+  color: var(--muted);
+  padding: 40px;
+  font-size: 14px;
+}
+
+footer {
+  margin-top: 56px;
+  border-top: 1px solid #1e293b;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.footer-dot { color: #334155; }
+
+@media (max-width: 960px) {
+  header { flex-direction: column; gap: 20px; }
+  .header-meta { flex-direction: row; justify-content: flex-start; }
+  .meta-item { align-items: flex-start; }
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  .charts-row.big-small { grid-template-columns: 1fr; }
+  .insight-row { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  header { padding: 24px 20px; }
+  .container { padding: 0 16px; }
+  .kpi-grid { grid-template-columns: 1fr 1fr; }
+  .insight-row { grid-template-columns: 1fr; }
+}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- #HEADER -->
+<header>
+  <div class="header-left">
+    <div class="author-tag">Donson Hoang · Data Analyst</div>
+    <h1>Amazon Echo Dot 2<span class="title-accent"> Review Analysis</span></h1>
+    <p class="header-sub">Exploring what 6,855 customers actually said — sentiment, trends, and product insights</p>
+  </div>
+  <div class="header-meta">
+    <div class="meta-item">
+      <span class="meta-label">Dataset</span>
+      <span class="meta-value">6,855 reviews</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Period</span>
+      <span class="meta-value">Sep – Oct 2017</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Tool</span>
+      <span class="meta-value">HTML / JS / MySQL</span>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ABOUT -->
+  <section class="about-banner">
+    <div class="about-icon">💬</div>
+    <div class="about-text">
+      I pulled this dataset from Amazon product review pages for the 2nd-generation Echo Dot, which launched in September 2017. After cleaning and loading it into MySQL, I ran queries to find patterns in ratings, keywords, and customer behavior. This dashboard is the visual output of that analysis.
+    </div>
+  </section>
+
+  <!-- KPI CARDS -->
+  <section>
+    <h2 class="section-title">At a Glance</h2>
+    <div class="kpi-grid">
+      <div class="kpi-card teal">
+        <div class="kpi-label">Total Reviews</div>
+        <div class="kpi-value">6,855</div>
+        <div class="kpi-sub">Sep – Oct 2017</div>
+      </div>
+      <div class="kpi-card amber">
+        <div class="kpi-label">Avg. Star Rating</div>
+        <div class="kpi-value">4.21 <span class="kpi-star">★</span></div>
+        <div class="kpi-sub">Out of 5</div>
+      </div>
+      <div class="kpi-card green">
+        <div class="kpi-label">5-Star Reviews</div>
+        <div class="kpi-value">63.9%</div>
+        <div class="kpi-sub">4,384 reviews</div>
+      </div>
+      <div class="kpi-card sky">
+        <div class="kpi-label">Verified Purchases</div>
+        <div class="kpi-value">96.9%</div>
+        <div class="kpi-sub">6,641 of 6,855</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RATING + COLOR -->
+  <section>
+    <h2 class="section-title">Ratings &amp; Preferences</h2>
+    <div class="charts-row big-small">
+
+      <div class="chart-card">
+        <h3>Rating Breakdown</h3>
+        <p class="subtitle">Most customers were happy — but the speaker complaints are concentrated at 1–2 stars</p>
+        <div class="sentiment-bars">
+          <div class="sentiment-row">
+            <div class="sentiment-label">5★</div>
+            <div class="bar-bg"><div class="bar-fill" style="width:63.9%;background:#4ade80;"></div></div>
+            <div class="bar-count">4,384</div>
+          </div>
+          <div class="sentiment-row">
+            <div class="sentiment-label">4★</div>
+            <div class="bar-bg"><div class="bar-fill" style="width:14.2%;background:#38bdf8;"></div></div>
+            <div class="bar-count">970</div>
+          </div>
+          <div class="sentiment-row">
+            <div class="sentiment-label">3★</div>
+            <div class="bar-bg"><div class="bar-fill" style="width:8.7%;background:#facc15;"></div></div>
+            <div class="bar-count">595</div>
+          </div>
+          <div class="sentiment-row">
+            <div class="sentiment-label">2★</div>
+            <div class="bar-bg"><div class="bar-fill" style="width:5.1%;background:#fb923c;"></div></div>
+            <div class="bar-count">348</div>
+          </div>
+          <div class="sentiment-row">
+            <div class="sentiment-label">1★</div>
+            <div class="bar-bg"><div class="bar-fill" style="width:8.1%;background:#f87171;"></div></div>
+            <div class="bar-count">558</div>
+          </div>
+        </div>
+        <div class="chart-wrap" style="height:170px;margin-top:20px;">
+          <canvas id="ratingChart"></canvas>
+        </div>
+      </div>
+
+      <div class="side-col">
+        <div class="chart-card" style="flex:1;">
+          <h3>Device Color</h3>
+          <p class="subtitle">Black vs. White — both rate almost identically</p>
+          <div class="chart-wrap" style="height:145px;">
+            <canvas id="colorChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card" style="flex:1;">
+          <h3>Verified vs. Unverified</h3>
+          <p class="subtitle">Verified buyers rate 0.32★ higher on average</p>
+          <div class="compare-grid">
+            <div class="compare-box green-box">
+              <div class="clabel">Verified</div>
+              <div class="cvalue">4.22</div>
+              <div class="ccount">6,641 reviews</div>
+            </div>
+            <div class="compare-box amber-box">
+              <div class="clabel">Unverified</div>
+              <div class="cvalue">3.90</div>
+              <div class="ccount">214 reviews</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section>
+    <h2 class="section-title">Review Volume Over Time</h2>
+    <div class="chart-card">
+      <h3>Monthly Review Count</h3>
+      <p class="subtitle">September had 2.2× more reviews than October — the classic launch spike pattern</p>
+      <div class="chart-wrap" style="height:190px;">
+        <canvas id="timelineChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEYWORDS -->
+  <section>
+    <h2 class="section-title">What Customers Talked About</h2>
+    <div class="chart-card">
+      <h3>Top Keywords in Review Text</h3>
+      <p class="subtitle">After removing stopwords — "love," "music," and "speaker" tell the whole story</p>
+      <div class="kw-list">
+        <div class="kw-row"><div class="kw-label">love</div><div class="kw-bar-bg"><div class="kw-bar-fill" style="width:100%;"></div></div><div class="kw-count">2,013</div></div>
+        <div class="kw-row"><div class="kw-label">echo</div><div class="kw-bar-bg"><div class="kw-bar-fill" style="width:88.9%;"></div></div><div class="kw-count">1,789</div></div>
+        <div class="kw-row"><div class="kw-label">alexa</div><div class="kw-bar-bg"><div class="kw-bar-fill" style="width:81.5%;"></div></div><div class="kw-count">1,641</div></div>
+        <div class="kw-row"><div class="kw-label">great</div><div class="kw-bar-bg"><div class="kw-bar-fill" style="width:67.1%;"></div></div><div class="kw-count">1,350</div></div>
+        <div class="kw-row"><div class="kw-label">music</div><div class="kw-bar-bg"><div class="kw-bar-fill" style="width:64.1%;"></div></div><div class="kw-count">1,291</div></div>
+        <div class="kw-row"><div class="kw-label">amazon</div><div class="kw-bar-bg"><div class="kw-bar-fill" style="width:33.7%;"></div></div><div class="kw-count">679</div></div>
+        <div class="kw-row"><div class="kw-label">works</div><div class="kw-bar-bg"><div class="kw-bar-fill" style="width:30.7%;"></div></div><div class="kw-count">619</div></div>
+        <div class="kw-row"><div class="kw-label">speaker</div><div class="kw-bar-bg"><div class="kw-bar-fill" style="width:29.5%;"></div></div><div class="kw-count">593</div></div>
+        <div class="kw-row"><div class="kw-label">sound</div><div class="kw-bar-bg"><div class="kw-bar-fill" style="width:20.5%;"></div></div><div class="kw-count">413</div></div>
+        <div class="kw-row"><div class="kw-label">weather</div><div class="kw-bar-bg"><div class="kw-bar-fill" style="width:15.9%;"></div></div><div class="kw-count">321</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIGHTS -->
+  <section>
+    <h2 class="section-title">What I Found</h2>
+    <div class="insight-row">
+      <div class="insight-card">
+        <div class="insight-icon">🎵</div>
+        <div class="insight-text">
+          <div class="ititle">Music is the #1 use case</div>
+          <div class="ibody">"Music" appears 1,291 times. "Speaker" and "sound" round out the top 10. Audio playback drives both the highest praise and the most complaints.</div>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-icon">🔇</div>
+        <div class="insight-text">
+          <div class="ititle">Speaker quality = low ratings</div>
+          <div class="ibody">1- and 2-star reviews almost always mention the speaker being too quiet or tinny. The most common fix recommended: pair it with a Bluetooth speaker.</div>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-icon">🏠</div>
+        <div class="insight-text">
+          <div class="ititle">Smart home users are the loyalists</div>
+          <div class="ibody">4- and 5-star reviewers frequently mention lights, multiple units, and home automation. These customers are the most likely to buy again.</div>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-icon">⬛</div>
+        <div class="insight-text">
+          <div class="ititle">Black outsells White 79% to 21%</div>
+          <div class="ibody">5,410 Black vs. 1,445 White. Average ratings are nearly identical (4.21 vs 4.20), so color is a style choice — not a quality signal.</div>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-icon">📈</div>
+        <div class="insight-text">
+          <div class="ititle">September launch spike</div>
+          <div class="ibody">4,726 reviews in September vs. 2,129 in October. The 2nd-gen Echo Dot launched Sep 2017, which explains the 2.2× surge in first-month reviews.</div>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-icon">🔍</div>
+        <div class="insight-text">
+          <div class="ititle">Unverified buyers rate lower</div>
+          <div class="ibody">Only 3.1% of reviews are unverified, but they average 3.90★ vs 4.22★ for verified buyers. Could be gifted units, or review manipulation worth flagging.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEW BROWSER -->
+  <section>
+    <h2 class="section-title">Browse the Reviews</h2>
+    <div class="chart-card">
+      <h3>Review Explorer</h3>
+      <p class="subtitle">100-review sample, evenly spread across all star ratings — search and filter to dig in</p>
+
+      <div class="browser-controls">
+        <input class="search-box" id="searchInput" type="text" placeholder="Search title or review text…" oninput="renderReviews()" />
+        <select class="filter-select" id="ratingFilter" onchange="renderReviews()">
+          <option value="">All Ratings</option>
+          <option value="5">★★★★★ 5 Stars</option>
+          <option value="4">★★★★ 4 Stars</option>
+          <option value="3">★★★ 3 Stars</option>
+          <option value="2">★★ 2 Stars</option>
+          <option value="1">★ 1 Star</option>
+        </select>
+        <select class="filter-select" id="colorFilter" onchange="renderReviews()">
+          <option value="">All Colors</option>
+          <option value="Black">Black</option>
+          <option value="White">White</option>
+        </select>
+        <select class="filter-select" id="verifiedFilter" onchange="renderReviews()">
+          <option value="">All Buyers</option>
+          <option value="true">Verified Only</option>
+          <option value="false">Unverified Only</option>
+        </select>
+      </div>
+
+      <div id="reviewCountLabel" class="review-count-label"></div>
+      <div class="review-list" id="reviewList"></div>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span>Donson Hoang</span>
+  <span class="footer-dot">·</span>
+  <span>donsonhoang@gmail.com</span>
+  <span class="footer-dot">·</span>
+  <span>Amazon Echo Dot 2 Review Analysis</span>
+</footer>
+
+<script>
+const REVIEWS = [{"title":"The Fun is Gone.","text":"My wife bought this for me. At first I was excited, but the longer I sat with it the more disappointed I became. Alexa does not speak conversational English, trying to setup and implement the skills w","rating":1,"color":"Black","verified":true,"date":"9/4/2017"},{"title":"Just received a replacement Dot 2 and still have same ...","text":"Just received a replacement Dot 2 and still have same problem.  It only works correctly if you press the action button first.  If you wake it up with your voice it's ring lights up for only a second o","rating":1,"color":"Black","verified":true,"date":"10/6/2017"},{"title":"One Star","text":"More like a gadget than anything else. But it seems to be getting better.","rating":1,"color":"Black","verified":true,"date":"9/11/2017"},{"title":"We have an Echo with which we are very pleased. It is very easy to use","text":"We have an Echo with which we are very pleased.  It is very easy to use and provides excellent sound.However, we are very disappointed in the Echo Dot.  The sound is very tinny and raising the volume ","rating":1,"color":"Black","verified":true,"date":"9/19/2017"},{"title":"When I loaded the app on my phone it bounced ...","text":"When I loaded the app on my phone it bounced me off my email server and I could not get it to pair with other Bluetooth devices.","rating":1,"color":"Black","verified":true,"date":"9/26/2017"},{"title":"One Star","text":"It doesn't know anything and the audio sucks.","rating":1,"color":"White","verified":true,"date":"9/21/2017"},{"title":"Useless","text":"Doesn't understand anything I say even after training it.","rating":1,"color":"Black","verified":true,"date":"9/15/2017"},{"title":"The idea of Alexa is great. However","text":"We received Alexa as a birthday present. The idea of Alexa is great.  However, upon using Alexa I can only describe it as mentally challenged.  I asked for an old English tune from the 1900s by name a","rating":1,"color":"Black","verified":false,"date":"9/18/2017"},{"title":"Cool? Yes. Worth it, probably not.","text":"Extremely weak wifi connection, kept cutting in and out. Only buy for basic use, or if you have an older speaker that you want to make wireless. Since seemingly every device now has a Bluetooth connec","rating":1,"color":"Black","verified":true,"date":"9/7/2017"},{"title":"Speaker is not good and I don't like that I couldn't play my ...","text":"Speaker is not good and I don't like that I couldn't play my Apple radio music through it . I returned it","rating":1,"color":"Black","verified":false,"date":"10/24/2017"},{"title":"One Star","text":"Will not respond to commands.  Will be exchanging for a tap.","rating":1,"color":"Black","verified":true,"date":"9/7/2017"},{"title":"Smartphone does a better job. We are returning it.","text":"VERY DISAPPOINTED! !! My smartphone does the exact same thing and is cordless ! Extremely hard to set up. And you have to buy an expensive battery for it to be cordless. We are returning it.","rating":1,"color":"Black","verified":true,"date":"9/2/2017"},{"title":"Wait for the next generation","text":"I am not at all impressed with this thing. Using it for lights, takes longer than walking over and turning on the light myself. It goes off talking on its own when no one has said a thing.","rating":1,"color":"Black","verified":true,"date":"9/17/2017"},{"title":"I wouldnt recommend buying this from Amazon","text":"This item was purchased in Aug and this is only Oct it has already quit working!! I wouldnt recommend buying this from Amazon!!","rating":1,"color":"White","verified":true,"date":"10/12/2017"},{"title":"Not what it's cracked up to be!","text":"I don't like it! It doesn't do what it's suppose to and it turns off & on by itself without a command.","rating":1,"color":"Black","verified":true,"date":"9/26/2017"},{"title":"I guess I just don't get its purpose","text":"My son actually got this because he thought it was cool from the tv commercials but turns out that it's pretty much useless.","rating":1,"color":"Black","verified":true,"date":"9/26/2017"},{"title":"One Star","text":"Alexa doesnt seem to know anything","rating":1,"color":"White","verified":true,"date":"9/26/2017"},{"title":"One Star","text":"Disappointed!!","rating":1,"color":"Black","verified":true,"date":"10/4/2017"},{"title":"One Star","text":"Sucks","rating":1,"color":"White","verified":true,"date":"10/3/2017"},{"title":"Awesome if you don't value your privacy","text":"Awesome if you like Amazon listening to your every word. Gave as gift to someone who wanted it. I'm sure it works great but so creepy.","rating":1,"color":"White","verified":true,"date":"9/13/2017"},{"title":"Two Stars","text":"To much effort to get access to useful information","rating":2,"color":"Black","verified":true,"date":"9/2/2017"},{"title":"Come On it's the 21st Century","text":"I received this item as last years Christmas gift from my brother. Certainly more than this horrible sound quality was expected.","rating":2,"color":"Black","verified":true,"date":"10/15/2017"},{"title":"Two Stars","text":"Will not stay connected to the internet.","rating":2,"color":"Black","verified":true,"date":"9/22/2017"},{"title":"Two Stars","text":"volume not loud enough","rating":2,"color":"Black","verified":true,"date":"10/10/2017"},{"title":"Great product - horrible customer support....","text":"When the Echo functions properly, it is a wonderful device.  However, if you have problems with it the customer support is lacking.","rating":2,"color":"White","verified":true,"date":"10/18/2017"},{"title":"Have to tell it 10 times to play deep tracks ...","text":"Have to tell it 10 times to play deep tracks sirius xm  can you tell me why every time i want to listen ........joe","rating":2,"color":"Black","verified":true,"date":"9/27/2017"},{"title":"Two Stars","text":"The sound is poor compared to Alexa","rating":2,"color":"White","verified":true,"date":"9/28/2017"},{"title":"This does not have a great sound quality","text":"This does not have a great sound quality, my friend has the big one and the sound is terrific. Not loud at all, other than that its great","rating":2,"color":"White","verified":true,"date":"9/19/2017"},{"title":"Pretty frustrating dealing with this device","text":"Most of the time, Alexa cannot answer our requests or has no idea what we are saying. Other times, she turns on randomly or the music will stop playing in the middle of a song.","rating":2,"color":"Black","verified":true,"date":"9/27/2017"},{"title":"It's ok... Mostly I use it for streaming music.","text":"I thought it would be more useful. When working it's pretty good but there are issues with connections for the lights and switches so I cannot rely on it.","rating":2,"color":"Black","verified":true,"date":"10/22/2017"},{"title":"Don't Buy it ... a waste of money","text":"We don't use it...a waste of money...","rating":2,"color":"Black","verified":true,"date":"9/17/2017"},{"title":"Not as useful as you think.","text":"Cool but she goes off whenever I don't want her too. I'll be watching tv and she will start talking.","rating":2,"color":"Black","verified":true,"date":"9/6/2017"},{"title":"Two Stars","text":"Does not respond always.","rating":2,"color":"Black","verified":true,"date":"9/27/2017"},{"title":"Two Stars","text":"Not up to my satisfaction","rating":2,"color":"Black","verified":true,"date":"9/3/2017"},{"title":"Pay and use services. Doesn't google things we ask","text":"Waste of money. Alexa needs paid accounts for music and doesn't google things we ask.","rating":2,"color":"Black","verified":true,"date":"10/3/2017"},{"title":"Two Stars","text":"Sound is terrible. So flat","rating":2,"color":"Black","verified":true,"date":"10/23/2017"},{"title":"App full of bugs","text":"I've been trying to set it up for 2 days, but still unsuccessful. The app is full of bugs and design flaws.","rating":2,"color":"White","verified":true,"date":"9/21/2017"},{"title":"Defective Dot","text":"My echo dot has never been loud enough. The speakers don't work around the whole base — only on one side.","rating":2,"color":"White","verified":true,"date":"9/14/2017"},{"title":"Two Stars","text":"Maybe I got a lemon, but she never hears me and I have to keep repeating. Very annoying","rating":2,"color":"Black","verified":true,"date":"9/27/2017"},{"title":"Just go for the big one.","text":"The speaker sucks. The microphone sucks. It fulfills its purpose, I guess... But all in all it's less than impressive. Just spend the extra and grab the original.","rating":3,"color":"Black","verified":true,"date":"9/3/2017"},{"title":"The speaker is the main issue","text":"The speaker doesn't get very loud and has a weak sound to it.  Other than that it works great — I just prefer to pair it with my Bose speaker.","rating":3,"color":"White","verified":true,"date":"9/8/2017"},{"title":"Three Stars","text":"Could have been more accommodating to my needs","rating":3,"color":"White","verified":true,"date":"10/1/2017"},{"title":"Three Stars","text":"Sound is sub par vs the full size Echo.","rating":3,"color":"White","verified":true,"date":"9/19/2017"},{"title":"Sound quality weak","text":"Sound quality does not match the Echo, but still works well.","rating":3,"color":"Black","verified":true,"date":"9/3/2017"},{"title":"I like how she tells me the weather and news","text":"Alexa isn't able to answer many questions that I ask her. I find Siri a little bit more responsive. I like how she tells me the weather and news. That's cool.","rating":3,"color":"Black","verified":true,"date":"9/26/2017"},{"title":"My fault for not reading the directions.","text":"I thought that this Echo Dot was connected to Bluetooth and could be taken around the house without being plugged in.","rating":3,"color":"White","verified":true,"date":"9/19/2017"},{"title":"It's fun for about 20 or 30 minutes","text":"It's fun for about 20 or 30 minutes, until you realize there's far more it doesn't know and can't do to be truly useful.","rating":3,"color":"Black","verified":true,"date":"9/28/2017"},{"title":"enjoyable toy","text":"nice toy but all can be done through the phone/laptop","rating":3,"color":"White","verified":true,"date":"9/28/2017"},{"title":"Search engine is limited","text":"Search engine on it is limited, Amazon tries to get you to use skills to compensate for its shortcomings.","rating":3,"color":"Black","verified":true,"date":"9/27/2017"},{"title":"Good for music but that's about it","text":"She knows nothing. I ask and she says sorry I don't know that — but she is good for music, the time, and the weather","rating":3,"color":"Black","verified":true,"date":"9/9/2017"},{"title":"Alexa is like a child most of the time","text":"Alexa is like a child most of the time. Doesn't listen, doesn't understand, or doesn't do what you want. It's helpful for some simple tasks, but can be frustrating.","rating":3,"color":"White","verified":true,"date":"9/19/2017"},{"title":"Connectivity is a pain","text":"Device is super cool and intuitive, but has trouble with basic connectivity. Changing networks is an absolute pain.","rating":3,"color":"Black","verified":true,"date":"9/24/2017"},{"title":"Arrived next day — but wrong color","text":"Arrived next day, which was great. It often has a hard time hearing and I received a black one, although I ordered a white one. Love that it has games and will play my Spotify.","rating":3,"color":"White","verified":true,"date":"10/20/2017"},{"title":"A little disappointing","text":"Doesn't always connect with drop in, and often says unavailable. Disappointing because drop in was a big factor in my purchase.","rating":3,"color":"Black","verified":true,"date":"9/19/2017"},{"title":"It's okay","text":"It's okay — not as in depth as Google assistant but I intend to add Fire TV to see how that works.","rating":3,"color":"Black","verified":true,"date":"9/26/2017"},{"title":"Better suited for small areas","text":"Spoiled by the sounds from my Tap — this is more for beside your bed or in the kitchen while you cook.","rating":3,"color":"Black","verified":true,"date":"9/16/2017"},{"title":"Four Stars","text":"it has been a helpful tool","rating":4,"color":"Black","verified":true,"date":"9/19/2017"},{"title":"Seems more reliable than my Echo","text":"Seems more reliable than my Echo as far as responding to commands, but that could be because the Echo is in a larger space.","rating":4,"color":"Black","verified":true,"date":"10/2/2017"},{"title":"Setup took a while","text":"Would have given it a 5-star rating, but took me too long to set up (not too techie oriented).","rating":4,"color":"Black","verified":true,"date":"10/10/2017"},{"title":"OK as a secondary Alexa unit.","text":"Bought this after I got an Echo. I use it in my office. It has all the functions of the Echo but much lower sound quality. Good as second unit.","rating":4,"color":"Black","verified":true,"date":"9/15/2017"},{"title":"Great for subtle humor","text":"Asked Alexa if she voted for President Trump. Her answer: I looked and looked, but was never able to find a voting booth.","rating":4,"color":"Black","verified":true,"date":"9/26/2017"},{"title":"Four Stars","text":"Great! I like it.","rating":4,"color":"Black","verified":true,"date":"10/4/2017"},{"title":"Great features. Sound quality fair","text":"Great features.  Sound quality fair.","rating":4,"color":"White","verified":true,"date":"9/27/2017"},{"title":"Great companion","text":"Waiting for spanish phonemas!! Rest fine","rating":4,"color":"Black","verified":true,"date":"9/16/2017"},{"title":"Still room for improvement","text":"still room for improvement, but, it's getting there.","rating":4,"color":"Black","verified":true,"date":"9/7/2017"},{"title":"Wish it was louder for music","text":"Like what it can do, wish it was louder when used with music.","rating":4,"color":"White","verified":true,"date":"10/14/2017"},{"title":"Second gen feels a bit slower","text":"It feels like it's not working as good as the old version (I have both). It takes a while to respond and gets it wrong more.","rating":4,"color":"White","verified":true,"date":"9/20/2017"},{"title":"Works great once set up","text":"Once setup correctly works great. Thinking of purchasing a second!!","rating":4,"color":"White","verified":true,"date":"9/18/2017"},{"title":"Good for music","text":"Doesn't always recognize voice, good for music, cat sounds, weather...","rating":4,"color":"Black","verified":true,"date":"9/8/2017"},{"title":"I love and hate this thing","text":"When Alexa hears me it's great. The 50% of the time she doesn't, I want to throw it out the window. But I love wiring it up with custom integrations.","rating":4,"color":"Black","verified":true,"date":"10/4/2017"},{"title":"Great device for the disabled.","text":"It is a great device to use especially if you are disabled and have a hard time getting around — connects to so many other devices.","rating":4,"color":"Black","verified":true,"date":"9/27/2017"},{"title":"Very happy with Alexa","text":"She tells jokes, plays music, answers questions about movies and actors. A few things require extra apps but overall great.","rating":4,"color":"Black","verified":true,"date":"9/1/2017"},{"title":"DOT is GREAT","text":"My wife loves having the Dot in our bedroom. It works great. Well worth the cost.","rating":4,"color":"Black","verified":true,"date":"9/4/2017"},{"title":"Five Stars","text":"As expected","rating":5,"color":"Black","verified":true,"date":"9/7/2017"},{"title":"Kids love it","text":"It's a fun little toy - the kids really get a kick out of it, and I found it can be quite useful sometimes.","rating":5,"color":"Black","verified":true,"date":"9/5/2017"},{"title":"I love the Echo dot","text":"I love the Echo dot! I will be ordering a couple more for Christmas presents. Great value for price.","rating":5,"color":"Black","verified":true,"date":"9/2/2017"},{"title":"Lots of uses, fits anywhere","text":"I am very happy with this purchase! I listen to music, get news updates, use it for calculations for my bead work.","rating":5,"color":"Black","verified":true,"date":"10/5/2017"},{"title":"Five Stars","text":"Bought this for my husband. He enjoys it. Going to put it in the motorhome.","rating":5,"color":"Black","verified":true,"date":"9/27/2017"},{"title":"I LOVE ALEXA","text":"Alexa is awesome! We use the Echo Dot in our home for music, homework, reminders, alarm...it is really helpful.","rating":5,"color":"White","verified":true,"date":"10/20/2017"},{"title":"Five Stars","text":"Have bought three of these and everyone seems to enjoy them.","rating":5,"color":"White","verified":true,"date":"9/2/2017"},{"title":"Works great for smart lights","text":"Works great for controlling my LIFX and Philips Hue Lights.","rating":5,"color":"Black","verified":false,"date":"10/23/2017"},{"title":"EXCEEDS EXPECTATIONS","text":"OMG......This hussy Alexa is amazing lmao!","rating":5,"color":"Black","verified":true,"date":"9/2/2017"},{"title":"Best item I bought this year","text":"This ECHO is amazing, it's very helpful in reminding me of appointments. Still learning all the things it can do, but I am so glad I bought it.","rating":5,"color":"Black","verified":true,"date":"9/7/2017"},{"title":"Five Stars","text":"Works great.","rating":5,"color":"Black","verified":true,"date":"10/8/2017"},{"title":"Connected to my Bose — great combo","text":"I just bought my second for upstairs. Connected it to my Bose radio. I use Alexa for the weather and music. Music is my passion. You'll love it.","rating":5,"color":"Black","verified":true,"date":"9/27/2017"},{"title":"Changed my father's life","text":"He can finally feel engaged with the world again now that he has this. He can ask for music, podcasts, information, anything. It's changed his life. Get it if you have anyone with physical limitations.","rating":5,"color":"Black","verified":true,"date":"9/27/2017"},{"title":"Gotta love it","text":"what can you say... Gotta love it","rating":5,"color":"Black","verified":true,"date":"9/18/2017"},{"title":"2nd Echo Dot, still very satisfied!","text":"This is my 2nd Echo Dot, and I am still very satisfied!! It keeps getting smarter and smarter as new skills are added. At the GREAT price, it's a CAN'T MISS!!!","rating":5,"color":"Black","verified":true,"date":"10/8/2017"},{"title":"Five Stars","text":"Nice to have a choice in a smaller dimension.","rating":5,"color":"White","verified":true,"date":"9/28/2017"},{"title":"Great so far","text":"Great so far!! Speaker is so so but good enough for random music alone. If I am throwing a party, I hook it up to my Bluetooth speaker.","rating":5,"color":"Black","verified":true,"date":"9/29/2017"}];
+
+function stars(n) {
+  return '★'.repeat(n) + '☆'.repeat(5 - n);
+}
+
+function renderReviews() {
+  const query  = document.getElementById('searchInput').value.toLowerCase();
+  const rating = document.getElementById('ratingFilter').value;
+  const color  = document.getElementById('colorFilter').value;
+  const verif  = document.getElementById('verifiedFilter').value;
+
+  const filtered = REVIEWS.filter(r => {
+    if (rating && r.rating !== +rating) return false;
+    if (color  && r.color  !== color)   return false;
+    if (verif === 'true'  && !r.verified) return false;
+    if (verif === 'false' &&  r.verified) return false;
+    if (query) {
+      if (!(r.title + ' ' + r.text).toLowerCase().includes(query)) return false;
+    }
+    return true;
+  });
+
+  document.getElementById('reviewCountLabel').textContent =
+    `Showing ${filtered.length} of 100 sampled reviews`;
+
+  const list = document.getElementById('reviewList');
+  if (!filtered.length) {
+    list.innerHTML = '<div class="no-results">No reviews match your filters.</div>';
+    return;
+  }
+
+  const ratingColors = { 5:'#4ade80', 4:'#38bdf8', 3:'#facc15', 2:'#fb923c', 1:'#f87171' };
+
+  list.innerHTML = filtered.map(r => `
+    <div class="review-item">
+      <div class="review-top">
+        <span class="star-inline" style="color:${ratingColors[r.rating]}">${stars(r.rating)}</span>
+        <span class="review-title">${r.title}</span>
+        ${r.verified ? '<span class="badge badge-verified">Verified</span>' : ''}
+        <span class="badge badge-color">${r.color}</span>
+      </div>
+      <div class="review-text">${r.text}</div>
+      <div class="review-footer">
+        <span class="review-date">${r.date}</span>
+      </div>
+    </div>
+  `).join('');
+}
+
+const gridColor = '#1e293b';
+const tickColor = '#64748b';
+
+new Chart(document.getElementById('ratingChart'), {
+  type: 'bar',
+  data: {
+    labels: ['1★','2★','3★','4★','5★'],
+    datasets: [{
+      data: [558, 348, 595, 970, 4384],
+      backgroundColor: ['#f87171','#fb923c','#facc15','#38bdf8','#4ade80'],
+      borderRadius: 6,
+      borderSkipped: false,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    scales: {
+      x: { grid: { color: gridColor }, ticks: { color: tickColor } },
+      y: { grid: { color: gridColor }, ticks: { color: tickColor } },
+    },
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => ` ${ctx.raw.toLocaleString()} reviews` } }
+    }
+  }
+});
+
+new Chart(document.getElementById('colorChart'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Black','White'],
+    datasets: [{
+      data: [5410, 1445],
+      backgroundColor: ['#38bdf8','#818cf8'],
+      borderColor: '#0f172a',
+      borderWidth: 3,
+      hoverOffset: 6,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    cutout: '68%',
+    plugins: {
+      legend: { display: true, position: 'bottom', labels: { color: tickColor, font: { size: 11 }, padding: 12 } },
+      tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.raw.toLocaleString()} (${(ctx.raw/6855*100).toFixed(1)}%)` } }
+    }
+  }
+});
+
+new Chart(document.getElementById('timelineChart'), {
+  type: 'bar',
+  data: {
+    labels: ['September 2017','October 2017'],
+    datasets: [{
+      data: [4726, 2129],
+      backgroundColor: ['rgba(56,189,248,0.85)','rgba(129,140,248,0.85)'],
+      borderRadius: 8,
+      borderSkipped: false,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    indexAxis: 'y',
+    scales: {
+      x: { grid: { color: gridColor }, ticks: { color: tickColor } },
+      y: { grid: { color: 'transparent' }, ticks: { color: '#cbd5e1', font: { size: 13 } } },
+    },
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => ` ${ctx.raw.toLocaleString()} reviews` } }
+    }
+  }
+});
+
+renderReviews();
+</script>
+</body>
+</html>

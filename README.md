@@ -9,8 +9,12 @@ Questions explored:
 
 
 What is the overall rating distribution across all reviews?
+
 Do verified purchasers rate the product differently than non-verified?
+
 How do ratings vary by product color (Black vs. White)?
+
 How has customer sentiment changed over time?
+
 What words and phrases appear most in low vs. high rated reviews?
 
